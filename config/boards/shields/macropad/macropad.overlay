@@ -12,7 +12,7 @@
         compatible = "zmk,matrix-transform";
         columns = <1>;
         rows = <7>;
-        map = 
+        map = <
             RC(0,0) RC(1,0) RC(2,0) RC(3,0)
             RC(4,0) RC(5,0) RC(6,0)
         >;
