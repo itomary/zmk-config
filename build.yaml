@@ -2,3 +2,5 @@
 include:
   - board: supermini_nrf52840
     shield: macropad
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
