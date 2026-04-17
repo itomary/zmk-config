@@ -42,7 +42,7 @@
 
         final_cut_layer {
             display-name = "Final Cut";
-            bindings = 
+            bindings = <
                 &kp C_MUTE
                 &zoom_reset
                 &kp C_PP
@@ -52,7 +52,7 @@
                 &weird_combo
             >;
 
-            sensor-bindings = 
+            sensor-bindings = <
                 &inc_dec_kp C_VOL_DN C_VOL_UP
                 &inc_dec_kp LG(MINUS) LG(EQUAL)
                 &inc_dec_kp C_BRI_DN C_BRI_UP
@@ -62,7 +62,7 @@
 
         logic_layer {
             display-name = "Logic";
-            bindings = 
+            bindings = <
                 &kp C_MUTE
                 &zoom_reset
                 &kp C_PP
@@ -72,7 +72,7 @@
                 &weird_combo
             >;
 
-            sensor-bindings = 
+            sensor-bindings = <
                 &inc_dec_kp C_VOL_DN C_VOL_UP
                 &inc_dec_kp LG(MINUS) LG(EQUAL)
                 &inc_dec_kp C_BRI_DN C_BRI_UP
