@@ -83,4 +83,5 @@
         steps = <80>;
         status = "okay";
     };
+    &spi0 { status = "disabled"; };
 };
