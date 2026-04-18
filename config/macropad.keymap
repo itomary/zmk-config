@@ -7,23 +7,31 @@
         tile_left: tile_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL &kp LSHFT &kp GLOBE>,
-                       <&macro_tap &kp LEFT>,
-                       <&macro_release &kp LCTRL &kp LSHFT &kp GLOBE>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT &kp GLOBE>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LCTRL &kp LSHFT &kp GLOBE>
+                ;
         };
 
         zoom_reset: zoom_reset {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>,
-                       <&macro_tap &kp N0>,
-                       <&macro_release &kp LGUI>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N0>
+                , <&macro_release &kp LGUI>
+                ;
         };
 
         weird_combo: weird_combo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(LA(LC(W))))>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT &kp LALT &kp LGUI>
+                , <&macro_tap &kp F13>
+                , <&macro_release &kp LCTRL &kp LSHFT &kp LALT &kp LGUI>
+                ;
         };
     };
 
@@ -37,48 +45,8 @@
                 &zoom_reset
                 &tile_left
                 &kp C_PP
-                &tog 1
-                &kp LG(SPACE)
-                &kp LCTRL
-            >;
-
-            sensor-bindings = <
-                &inc_dec_kp C_VOL_DN C_VOL_UP
-                &inc_dec_kp LG(MINUS) LG(EQUAL)
-                &inc_dec_kp C_BRI_DN C_BRI_UP
-                &inc_dec_kp LEFT RIGHT
-            >;
-        };
-
-        final_cut_layer {
-            display-name = "Final Cut";
-            bindings = <
-                &kp C_MUTE
-                &zoom_reset
-                &tile_left
-                &kp C_PP
-                &tog 2
-                &kp LG(SPACE)
-                &kp LCTRL
-            >;
-
-            sensor-bindings = <
-                &inc_dec_kp C_VOL_DN C_VOL_UP
-                &inc_dec_kp LG(MINUS) LG(EQUAL)
-                &inc_dec_kp C_BRI_DN C_BRI_UP
-                &inc_dec_kp LEFT RIGHT
-            >;
-        };
-
-        logic_layer {
-            display-name = "Logic";
-            bindings = <
-                &kp C_MUTE
-                &zoom_reset
-                &tile_left
-                &kp C_PP
-                &tog 0
-                &kp LG(SPACE)
+                &weird_combo
+                &kp LC(SPACE)
                 &kp LCTRL
             >;
 
