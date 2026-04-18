@@ -85,5 +85,7 @@
     };
 
 };
-
 &spi0 { status = "disabled"; };
+&spi1 { status = "disabled"; };
+&i2c0 { status = "disabled"; };
+&i2c1 { status = "disabled"; };
